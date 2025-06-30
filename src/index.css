@@ -1,0 +1,78 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  @apply bg-gray-50;
+}
+
+:root {
+  --background-color: #f8fafc;
+  --card-background: white;
+  --text-primary: #1e293b;
+  --text-secondary: #64748b;
+}
+
+body {
+  background-color: var(--background-color);
+  color: var(--text-primary);
+}
+
+.tremor-Card-root {
+  background-color: var(--card-background);
+  border: 1px solid #e2e8f0;
+  box-shadow: 0 1px 3px 0 rgb(0 0 0 / 0.1);
+}
+
+.dark {
+  --background-color: #0f172a;
+  --card-background: #1e293b;
+  --text-primary: #f1f5f9;
+  --text-secondary: #94a3b8;
+}
+
+/* Custom styles for charts */
+.tremor-Legend-root {
+  padding-top: 1rem;
+}
+
+.tremor-Card-root {
+  transition: transform 0.2s;
+}
+
+.tremor-Card-root:hover {
+  transform: translateY(-2px);
+}
+
+.metric-card {
+  @apply relative overflow-hidden;
+}
+
+.metric-card::before {
+  content: '';
+  @apply absolute top-0 left-0 w-full h-1;
+}
+
+.metric-card.indigo::before {
+  @apply bg-indigo-500;
+}
+
+.metric-card.emerald::before {
+  @apply bg-emerald-500;
+}
+
+.metric-card.amber::before {
+  @apply bg-amber-500;
+}
+
+.metric-card.blue::before {
+  @apply bg-blue-500;
+}
+
+.search-input {
+  @apply border-gray-200 focus:border-indigo-500 focus:ring-indigo-500;
+}
+
+.tremor-BarChart-bar {
+  @apply fill-current;
+} 
